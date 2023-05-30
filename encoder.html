@@ -1,0 +1,43 @@
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Encriptador</h1>
+
+  <main class="main">
+    <section class="form box">
+      <form action="">
+        <label for="input-texto">No incluir mayusculas ni acentos</label>
+        <input class="text-input" type="text" name="input-texto" id="input-texto" placeholder="Ingrese el texto aqui">
+        <input class="btn" type="button" value="Encriptar" id="btn-e">
+        <input class="btn" type="button" value="Desencriptar" id="btn-d">
+      </form>
+    </section>
+  
+    <section class="msg">
+      <h2 id="">Texto encriptado:</h2>
+      <input class="text-input-salida" type="text" id="msg">
+    </section>
+  </main>
+
+  <script type="text/javascript">
+function encriptar (){
+    var text = document.querySelector("#input-texto").value;
+    var textCifrado = text.replace(/e/gi, "enter").replace(/i/gi, "imes").replace(/a/gi, "ai").replace(/o/gi, "ober").replace(/u/gi, "ufat");
+    document.querySelector(".text-input-salida").value = textCifrado;
+    document.querySelector("#input-texto").value;
+    }
+
+
+    
+var boton1 = document.querySelector("#btn-e"); boton1.onclick = encriptar;
+
+function desencriptar (){ var text2 = document.querySelector("#input-texto").value; var text2Cifrado = text2.replace(/enter/gi, "e").replace(/imes/gi, "i").replace(/ai/gi, "a").replace(/ober/gi, "o").replace(/ufat/gi, "u"); document.querySelector(".text-input-salida").value = text2Cifrado; document.querySelector("#input-texto").value;
+
+}
+
+var boton2 = document.querySelector("#btn-d"); boton2.onclick = desencriptar;
+</script>
+</body>
+</html>
